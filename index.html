@@ -13,6 +13,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
   <!-- My Style -->
   <link rel="stylesheet" href="./style/main.css" />
+  <script>
+    // trigger to play music in the background with sweetalert
+window.addEventListener('load', () => {
+    Swal.fire({
+        title: 'Do you want to play music in the background?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.querySelector('.song').play();
+            animationTimeline();
+        } else {
+            animationTimeline();
+        }
+    });
+});
+  </script>
 </head>
 
 <body>
